@@ -1,0 +1,552 @@
+/*Animation inpired by https://www.w3schools.com/css/css3_animations.asp*/
+
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap');
+
+html {
+    scroll-snap-type: mandatory;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Patrick Hand';
+    text-align: center;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+.bacteria {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    -webkit-animation: bacteria 30s linear 0.1s infinite alternate;
+    animation: bacteria 30s linear 0.1s infinite alternate ease-in;
+}
+
+.bacteria1 {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    -webkit-animation: bacteria1 30s linear 0.1s infinite alternate;
+    animation: bacteria1 30s linear 0.1s infinite alternate ease-in;
+}
+
+
+
+.menu {
+    text-align: center;
+    background: #FBCCD6;
+    transition: .5s all;
+    text-decoration: none;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+}
+
+.menu ul {
+    margin: 0;
+    justify-content: center;
+    display: flex;
+}
+
+.menu ul li {
+    display: inline;
+    margin-right: 50px;
+}
+
+.nav-link {
+    font-size: 20pt;
+    color: #000000;
+    text-decoration: none;
+    transition: 0.2s all;
+}
+
+.nav-link:hover {
+    color: #3E80A7;
+}
+
+.shopping-cart {
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+}
+
+#shopping-cart-circle {
+    left: 22px;
+    top: -56px;
+    position: relative;
+    background: #ff0000e6;
+    padding: 10px;
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    line-height: 0.4;
+    color: white;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+#bg1 {
+    background-color: #FBCCD6;
+    padding-bottom: 64px;
+    overflow-x: hidden;
+
+}
+
+#bg1 section {
+    display: flex;
+    margin-left: 32px;
+}
+
+.cover {
+    box-shadow: 0px 1px 6px 1px #00000038;
+    transition: 0.2s all;
+}
+
+.cover:hover {
+    box-shadow: 0px 1px 6px 1px black;
+
+}
+
+.kjop {
+    border: 2px solid #3E80A7;
+    padding: 16px 64px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    background-color: #F4E4E7;
+    color: #263F4D;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.2s all;
+
+}
+
+/* On mouse-over */
+.kjop:hover {
+    border: 6px solid #3E80A7;
+}
+
+
+
+.title {
+    color: #3C82A7;
+    margin: 0;
+    text-align: center;
+    font-size: 42pt;
+    margin-bottom: 24px;
+    text-align: unset;
+}
+
+.subtitle {
+    font-size: 32px;
+    margin-bottom: 42px;
+    letter-spacing: 0.8px;
+}
+
+
+.column {
+    flex: 50%;
+    padding: 8px;
+    margin-left: 80px;
+    margin-right: 90px;
+    align-self: center;
+    text-align: justify;
+}
+
+.column-left {
+    text-align: center;
+}
+
+
+/*Vindu nr 2*/
+
+#bg2 {
+    background-color: #3D81A7;
+    display: grid;
+    place-items: center;
+    color: white;
+    padding: 0 20vw 0 20vw;
+    font-size: 2rem;
+    padding-bottom: 50px;
+}
+
+#bg2 h1 {
+    color: #F4E4E7;
+    border-bottom: 8px solid#296D95;
+    padding-bottom: 16px;
+}
+
+#bg2 ul {
+    list-style-image: url("./img/idea.png");
+
+}
+
+#bg2 li {
+    margin: 10px 0px 0px 0px;
+    text-align: left;
+}
+
+
+#bg3 {
+    background-color: #F4E4E7;
+    color: white;
+    padding: 20px;
+}
+
+.column-container {
+    display: grid;
+    place-items: center;
+    margin: 64px;
+    font-size: 2rem;
+    gap: 1rem;
+    grid-auto-flow: column;
+    align-items: center;
+    border: 4px solid #F5130A;
+    padding: 40px;
+
+
+}
+
+.column-container img {
+    border-radius: 50%;
+
+}
+
+.text {
+    letter-spacing: 0.5px;
+    font-size: 18pt;
+    line-height: 1.3;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.review-picture {
+    width: 200px;
+}
+
+
+#bg3 section {
+    color: #000000;
+    display: grid;
+    grid-auto-flow: row;
+    place-items: center;
+    font-size: 19pt;
+    align-items: unset;
+    align-self: start;
+}
+
+#bg3 section .circle {
+    height: 1rem;
+    width: 1rem;
+    background: white;
+    border-radius: 50%;
+}
+
+section {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+
+
+#bg4 {
+    background-color: #3D81A7;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    gap: 1rem;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+.item1 {
+    background-image: url('./img/1524899151_2MT7w07bQEGw.jpg');
+}
+
+.item2 {
+    background-image: url('img/intervju.png');
+
+}
+
+.image-button {
+    background-size: cover;
+    -moz-box-shadow: inset 0 0 10px #777777;
+    -webkit-box-shadow: inset 0 0 10px #777777;
+    box-shadow: inset 0 0 10px #777777;
+    cursor: pointer;
+    transition: 0.2s all;
+    opacity: 1;
+    filter: alpha(opacity=50);
+    
+}
+
+.image-button:hover {
+    opacity: 0.8;
+}
+
+#bg4 section {
+    color: #000000;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+}
+
+#bg4 section .circle {
+    height: 1rem;
+    width: 1rem;
+    background: white;
+    border-radius: 50%;
+}
+
+#video {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: #3D81A7;
+    color: white;
+
+}
+
+.video-container {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#utdrag {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: #FBCCD6;
+    color: #3D81A7;
+}
+
+.utdrag-container {
+    width: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+#bg5 {
+    background-color: #F4E4E7;
+    display: grid;
+    place-items: center;
+    color: #000000;
+    font-size: 2rem;
+    border: 4px solid #F5130A;
+    margin: 64px;
+    gap: 1rem;
+    grid-auto-flow: column;
+    align-items: center;
+    overflow: hidden;
+    /*padding: 20px; dette gjør at Micheal er ikke oppå ramme*/
+
+}
+
+.author-container {
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+.author {
+    text-transform: uppercase;
+    color: #3C82A7;
+    font-weight: bold;
+}
+
+.author-description {
+    font-size: 20pt;
+    text-align: center;
+}
+
+.michael-mosley {
+    width: 450px;
+    height: 450px;
+}
+
+#bg5 .h1 {
+    letter-spacing: 0.2rem;
+}
+
+#bg6 {
+    height: 100vh;
+    background-image: url('./img/background-book.jpg');
+    display: grid;
+    place-items: center;
+    color: white;
+    padding: 0 20vw 0 20vw;
+    font-size: 2rem;
+    background-position: center;
+
+}
+
+
+@-webkit-keyframes bacteria {
+    0% {
+        left: 0px;
+        top: 0px;
+        transform: scale(2.2, 2.2);
+    }
+
+    25% {
+        left: 100px;
+        top: 20px;
+        transform: scale(1, 1)
+    }
+
+    50% {
+        left: 120px;
+        top: 150px;
+    }
+
+    75% {
+        left: 20px;
+        top: 120px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@keyframes bacteria {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        left: 150px;
+        top: 0px;
+    }
+
+    50% {
+        left: 50px;
+        top: 150px;
+    }
+
+    75% {
+        left: 0px;
+        top: 200px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@-webkit-keyframes bacteria1 {
+    0% {
+        left: 10px;
+        top: 20px;
+        transform: scale(2.2, 2.2);
+    }
+
+    25% {
+        left: 40px;
+        top: 29px;
+        transform: scale(1, 1)
+    }
+
+    50% {
+        left: -200px;
+        top: -20px;
+    }
+
+    75% {
+        left: 50px;
+        top: 110px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@keyframes bacteria1 {
+    0% {
+        left: 10px;
+        top: 20px;
+    }
+
+    25% {
+        left: 240px;
+        top: 29px;
+    }
+
+    50% {
+        left: -120px;
+        top: -220px;
+    }
+
+    75% {
+        left: 50px;
+        top: 100px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@media (max-width:600px) {
+    .menu ul li {
+        margin-right: 20px;
+    }
+
+    #bg1 section {
+        display: block;
+        margin: 0;
+    }
+
+    #bg1 .column {
+        margin-left: 8px;
+        margin-right: 8px;
+        text-align: center;
+    }
+
+    #bg3 .column-container {
+        display: block;
+        margin: 0;
+    }
+
+    .text {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .hiddeonmobile {
+        display: none;
+    }
+    
+}
+
+
+
+@media (max-width:1000px) {
+    #bg5 {
+        grid-auto-flow: row;
+        margin: 16px;
+        display: block;
+    }
+}
